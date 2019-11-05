@@ -97,6 +97,10 @@ export default {
     showInnerContent: {
       type: Boolean,
       default: true,
+    },
+    containerNoSize: {
+      type: Boolean,
+      default: false,
     }
   },
 
@@ -165,7 +169,7 @@ export default {
     },
 
     containerStyle () {
-      return {
+      return this.containerNoSize ? {} : {
         height: `${this.diameter}px`,
         width: `${this.diameter}px`
       }

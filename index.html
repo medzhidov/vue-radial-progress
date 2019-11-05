@@ -98,6 +98,7 @@
                             :stop-color="stopColor"
                             :inner-stroke-color="innerStrokeColor"
                             :show-inner-content="showInnerContent"
+                            :container-no-size="containerNoSize"
                             :timing-func="timingFunc">
           <p>Total steps: {{ totalSteps }}</p>
           <p>Completed steps: {{ completedSteps }}</p>
@@ -175,13 +176,21 @@
           </td>
         </tr>
         <tr>
-            <td>
-              <label for="inner-stroke-color">Show inner content</label>
-            </td>
-            <td>
-              <input id="show-inner-content" type="checkbox" placeholder="Show inner content" v-model="showInnerContent">
-            </td>
-          </tr>
+          <td>
+            <label for="inner-stroke-color">Show inner content</label>
+          </td>
+          <td>
+            <input id="show-inner-content" type="checkbox" placeholder="Show inner content" v-model="showInnerContent">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="inner-stroke-color">Container no size</label>
+          </td>
+          <td>
+            <input id="container-no-size" type="checkbox" placeholder="Container no size" v-model="containerNoSize">
+          </td>
+        </tr>
       </div>
     </table>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.1/vue.min.js"></script>
@@ -206,7 +215,8 @@
             stopColor: '#429321',
             innerStrokeColor: '#323232',
             timingFunc: 'linear',
-            showInnerContent: true
+            showInnerContent: true,
+            containerNoSize: false,
           }
         },
         methods: {
