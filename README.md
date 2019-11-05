@@ -12,7 +12,7 @@
 # Installation
 
 ``` bash
-$ npm install --save vue-radial-progress
+$ npm i --save medzhidov/vue-radial-progress
 ```
 
 # Usage
