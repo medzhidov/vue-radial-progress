@@ -1,11 +1,9 @@
 <template>
   <div class="radial-progress-container" :style="containerStyle">
-    <div class="radial-progress-inner" :style="innerCircleStyle">
+    <div class="radial-progress-inner" v-if="showInnerContent" :style="innerCircleStyle">
       <slot></slot>
     </div>
     <svg class="radial-progress-bar"
-         :width="diameter"
-         :height="diameter"
          version="1.1"
          :viewBox="`0 0 ${diameter} ${diameter}`"
          xmlns="http://www.w3.org/2000/svg">
@@ -95,6 +93,10 @@ export default {
       type: String,
       required: false,
       default: 'linear'
+    },
+    showInnerContent: {
+      type: Boolean,
+      default: true,
     }
   },
 
@@ -298,5 +300,10 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.radial-progress-bar{
+  width: 100%;
+  height: 100%;
 }
 </style>

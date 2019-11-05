@@ -53,6 +53,7 @@ Name | Default value | Description
 `completedSteps` | `0` | Number of completed steps in the progress bar.
 `startColor` | `#bbff42` | The color of the leading edge of the progress bar gradient.
 `stopColor` | `#429321` | The secondary color of the progress bar gradient.
+`showInnerContent` | true | Diameter of the progress bar circle in pixels.
 `innerStrokeColor` | `#323232` | Background color of the progress bar.
 `strokeWidth` | `10` | The width of the progress bar.
 `animateSpeed` | `1000` | The amount of time in milliseconds to animate one step.

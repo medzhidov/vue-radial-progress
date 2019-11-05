@@ -97,6 +97,7 @@
                             :start-color="startColor"
                             :stop-color="stopColor"
                             :inner-stroke-color="innerStrokeColor"
+                            :show-inner-content="showInnerContent"
                             :timing-func="timingFunc">
           <p>Total steps: {{ totalSteps }}</p>
           <p>Completed steps: {{ completedSteps }}</p>
@@ -173,6 +174,14 @@
             <input id="inner-stroke-color" type="color" placeholder="Inner stroke color" :value="innerStrokeColor" @input="innerStrokeColorChanged">
           </td>
         </tr>
+        <tr>
+            <td>
+              <label for="inner-stroke-color">Show inner content</label>
+            </td>
+            <td>
+              <input id="show-inner-content" type="checkbox" placeholder="Show inner content" v-model="showInnerContent">
+            </td>
+          </tr>
       </div>
     </table>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.1/vue.min.js"></script>
@@ -196,7 +205,8 @@
             startColor: '#bbff42',
             stopColor: '#429321',
             innerStrokeColor: '#323232',
-            timingFunc: 'linear'
+            timingFunc: 'linear',
+            showInnerContent: true
           }
         },
         methods: {
