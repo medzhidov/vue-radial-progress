@@ -143,7 +143,7 @@ export default {
     },
 
     innerCircleDiameter () {
-      return this.diameter - (this.strokeWidth * 2)
+      return this.diameter - this.strokeWidth
     },
 
     innerCircleRadius () {
